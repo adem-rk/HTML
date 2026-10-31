@@ -1,0 +1,3 @@
+import {Instagram,Facebook,Mail,Github} from 'lucide-react'
+const links=[['Instagram','https://instagram.com/1d_1mr?srtk=aHNnYjdpc216NHk3',Instagram],['Facebook','https://www.facebook.com/share/1JHtEKMKTT/',Facebook],['Email','mailto:ademhammoudi119@gmail.com',Mail],['GitHub','https://github.com/adem-rk',Github]]
+export default function Social(){return <ul className="flex flex-wrap gap-2 justify-center list-none p-0 m-0">{links.map(([n,u,I])=><li key={n}><a className="btn no-underline" style={{color:'var(--fg)'}} href={u} {...(u.startsWith('http')?{target:'_blank',rel:'noopener noreferrer'}:{})}><I size={16}/>{n}</a></li>)}</ul>}
